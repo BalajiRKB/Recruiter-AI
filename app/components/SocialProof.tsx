@@ -1,4 +1,27 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.2,
+        },
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" as const },
+    },
+};
 
 export default function SocialProof() {
     return (
@@ -9,15 +32,21 @@ export default function SocialProof() {
                 borderBottom: "1px solid var(--border-color)",
             }}
         >
-            <div className="container">
+            <motion.div
+                className="container"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={containerVariants}
+            >
                 <div className="section-header text-center">
-                    <h2 className="section-title">Post Once, Reach Everywhere</h2>
-                    <p className="section-subtitle">
+                    <motion.h2 className="section-title" variants={itemVariants}>Post Once, Reach Everywhere</motion.h2>
+                    <motion.p className="section-subtitle" variants={itemVariants}>
                         RecruiterAI automatically syncs your job postings across all major
                         platforms
-                    </p>
+                    </motion.p>
                 </div>
-                <div className="slider-wrapper">
+                <motion.div className="slider-wrapper" variants={itemVariants}>
                     <div className="slider-track">
                         {/* Set 1 */}
                         <div className="slide">
@@ -82,8 +111,8 @@ export default function SocialProof() {
                             <img src="/assets/cutshort.png" alt="Cutshort" />
                         </div>
                     </div>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
     );
 }

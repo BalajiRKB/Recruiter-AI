@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
@@ -30,9 +33,16 @@ export default function Hero() {
 
             <div className="container hero-container">
                 {/* Person 1 (Top Left) */}
-                <div
+                <motion.div
                     className="hero-person person-1"
-                    style={{ top: "-15%", left: "2%", alignItems: "flex-start" }}
+                    style={{ top: "-10%", left: "2%", alignItems: "flex-start" }}
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1, y: -12 }}
+                    transition={{
+                        x: { duration: 0.8, ease: "easeOut" },
+                        opacity: { duration: 0.8, ease: "easeOut" },
+                        y: { repeat: Infinity, repeatType: "mirror", duration: 3, ease: "easeInOut" }
+                    }}
                 >
                     <div className="speech-bubble bubble-blue">
                         <p>
@@ -52,12 +62,19 @@ export default function Hero() {
                             <span>Founder at TechStart</span>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Person 2 (Top Right) */}
-                <div
+                <motion.div
                     className="hero-person person-2"
-                    style={{ top: "-10%", right: "5%", alignItems: "flex-end" }}
+                    style={{ top: "-5%", right: "5%", alignItems: "flex-end" }}
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1, y: -12 }}
+                    transition={{
+                        x: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+                        opacity: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+                        y: { repeat: Infinity, repeatType: "mirror", duration: 4, ease: "easeInOut", delay: 0.5 }
+                    }}
                 >
                     <div className="speech-bubble bubble-purple">
                         <p>
@@ -77,12 +94,19 @@ export default function Hero() {
                             <span>Hiring Manager at GrowthCo</span>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Person 3 (Bottom Left) */}
-                <div
+                <motion.div
                     className="hero-person person-3"
                     style={{ top: "60%", left: "6%", alignItems: "flex-start" }}
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1, y: -12 }}
+                    transition={{
+                        x: { duration: 0.8, ease: "easeOut", delay: 0.4 },
+                        opacity: { duration: 0.8, ease: "easeOut", delay: 0.4 },
+                        y: { repeat: Infinity, repeatType: "mirror", duration: 5, ease: "easeInOut", delay: 1 }
+                    }}
                 >
                     <div className="speech-bubble bubble-purple">
                         <p>
@@ -102,12 +126,19 @@ export default function Hero() {
                             <span>CEO at InnovateLabs</span>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Person 4 (Bottom Right) */}
-                <div
+                <motion.div
                     className="hero-person person-4"
                     style={{ top: "55%", right: "2%", alignItems: "flex-end" }}
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1, y: -12 }}
+                    transition={{
+                        x: { duration: 0.8, ease: "easeOut", delay: 0.6 },
+                        opacity: { duration: 0.8, ease: "easeOut", delay: 0.6 },
+                        y: { repeat: Infinity, repeatType: "mirror", duration: 4.5, ease: "easeInOut", delay: 0.7 }
+                    }}
                 >
                     <div className="speech-bubble bubble-blue">
                         <p>
@@ -127,18 +158,33 @@ export default function Hero() {
                             <span>Head of HR at ScaleUp</span>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
                 <div className="hero-content">
-                    <h1 className="hero-title">
+                    <motion.h1
+                        className="hero-title"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
                         Every <span className="serif-blue">Hire</span>,<br /> Faster and
                         Better
-                    </h1>
-                    <p className="hero-subtitle">
+                    </motion.h1>
+                    <motion.p
+                        className="hero-subtitle"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                    >
                         Stop losing great candidates to slow, manual hiring processes. Let
                         AI handle the heavy lifting while you focus on building your team.
-                    </p>
-                    <div className="hero-actions">
+                    </motion.p>
+                    <motion.div
+                        className="hero-actions"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                    >
                         <Link href="#" className="btn btn-primary btn-pill btn-lg">
                             Start Hiring Smarter
                         </Link>
@@ -160,7 +206,7 @@ export default function Hero() {
                             </svg>
                             See How It Works
                         </Link>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
