@@ -112,8 +112,10 @@ export default function Flowchart() {
                                             </span>
                                         </motion.div>
                                         <motion.div className="arrow" variants={nodeVariants}>↓</motion.div>
-                                        <motion.div className="diamond" variants={nodeVariants}>
-                                            <span>Score &gt; 75%?</span>
+                                        <motion.div variants={nodeVariants} className="w-full flex justify-center">
+                                            <div className="diamond">
+                                                <span>Score &gt; 75%?</span>
+                                            </div>
                                         </motion.div>
                                         <div className="branches">
                                             <div className="branch">
@@ -176,8 +178,10 @@ export default function Flowchart() {
                                             <span className="node-sub">using custom rubric</span>
                                         </motion.div>
                                         <motion.div className="arrow" variants={nodeVariants}>↓</motion.div>
-                                        <motion.div className="diamond" variants={nodeVariants}>
-                                            <span>Score &gt; 80%?</span>
+                                        <motion.div variants={nodeVariants} className="w-full flex justify-center">
+                                            <div className="diamond">
+                                                <span>Score &gt; 80%?</span>
+                                            </div>
                                         </motion.div>
                                         <div className="branches">
                                             <div className="branch">
@@ -192,8 +196,10 @@ export default function Flowchart() {
                                                     Hiring manager completes interview
                                                 </motion.div>
                                                 <motion.div className="arrow" variants={nodeVariants}>↓</motion.div>
-                                                <motion.div className="diamond" variants={nodeVariants}>
-                                                    <span>Hire?</span>
+                                                <motion.div variants={nodeVariants} className="w-full flex justify-center">
+                                                    <div className="diamond">
+                                                        <span>Hire?</span>
+                                                    </div>
                                                 </motion.div>
                                                 <div className="branches-inner">
                                                     <div className="branch">
@@ -260,8 +266,10 @@ export default function Flowchart() {
                                             <span className="node-sub">Automated patience period</span>
                                         </motion.div>
                                         <motion.div className="arrow" variants={nodeVariants}>↓</motion.div>
-                                        <motion.div className="diamond" variants={nodeVariants}>
-                                            <span>New relevant position?</span>
+                                        <motion.div variants={nodeVariants} className="w-full flex justify-center">
+                                            <div className="diamond">
+                                                <span>New relevant position?</span>
+                                            </div>
                                         </motion.div>
                                         <div className="branches">
                                             <div className="branch">
