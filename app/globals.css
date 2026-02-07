@@ -136,13 +136,13 @@ img {
 
 .btn-outline {
   background-color: transparent;
-  border-color: var(--primary);
-  color: var(--primary);
+  border-color: #111827 !important;
+  color: #111827 !important;
 }
 
 .btn-outline:hover {
-  background-color: var(--primary);
-  color: white;
+  background-color: #111827 !important;
+  color: white !important;
 }
 
 /* Header */
@@ -676,13 +676,13 @@ img {
 
 .tab-btn {
   background: #FFFFFF;
-  border: 1px solid #E5E7EB;
+  border: 2px solid #111827;
   padding: 1rem 1.5rem;
   border-radius: 9999px;
   /* Pill shape like hero buttons */
   font-size: 0.95rem;
   font-weight: 600;
-  color: #4B5563;
+  color: #111827;
   cursor: pointer;
   transition: all 0.2s;
   text-align: left;
@@ -699,16 +699,16 @@ img {
 }
 
 .tab-btn:hover {
-  border-color: #BFDBFE;
-  color: var(--primary);
-  background: #F9FAFB;
+  background: #111827;
+  color: white;
+  border-color: #111827;
 }
 
 .tab-btn.active {
-  background: var(--primary);
+  background: #111827;
   color: white;
-  border-color: var(--primary);
-  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+  border-color: #111827;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
 }
 
 .tab-btn.active::after {
@@ -1196,6 +1196,13 @@ img {
   font-weight: 700;
   color: white;
   font-size: 1rem;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .info strong {
@@ -1594,3 +1601,5 @@ img {
     text-align: center;
   }
 }
+
+/* CSS Animations removed in favor of Framer Motion */

@@ -1,8 +1,17 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Footer() {
     return (
-        <footer className="footer">
+        <motion.footer
+            className="footer"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-20px" }}
+            transition={{ duration: 0.6 }}
+        >
             <div className="container footer-container">
                 <div className="footer-brand">
                     <Link href="#" className="logo">
@@ -36,6 +45,6 @@ export default function Footer() {
                     </Link>
                 </div>
             </div>
-        </footer>
+        </motion.footer>
     );
 }
