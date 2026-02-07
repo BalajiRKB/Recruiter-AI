@@ -30,7 +30,10 @@ export default function Hero() {
 
             <div className="container hero-container">
                 {/* Person 1 (Top Left) */}
-                <div className="hero-person person-1">
+                <div
+                    className="hero-person person-1"
+                    style={{ top: "-15%", left: "2%", alignItems: "flex-start" }}
+                >
                     <div className="speech-bubble bubble-blue">
                         <p>
                             “Candidates wait 3 weeks for replies while I&apos;m juggling
@@ -40,7 +43,7 @@ export default function Hero() {
                     <div className="person-info">
                         <div className="avatar-circle">
                             <img
-                                src="https://ui-avatars.com/api/?name=Sarah+K&background=random"
+                                src="/assets/ellipse 1.png"
                                 alt="SK"
                             />
                         </div>
@@ -52,7 +55,10 @@ export default function Hero() {
                 </div>
 
                 {/* Person 2 (Top Right) */}
-                <div className="hero-person person-2">
+                <div
+                    className="hero-person person-2"
+                    style={{ top: "-10%", right: "5%", alignItems: "flex-end" }}
+                >
                     <div className="speech-bubble bubble-purple">
                         <p>
                             “Posted on LinkedIn. Got 200 applications. Skimmed through 20.
@@ -62,7 +68,7 @@ export default function Hero() {
                     <div className="person-info right-align">
                         <div className="avatar-circle">
                             <img
-                                src="https://ui-avatars.com/api/?name=Rahul+M&background=random"
+                                src="/assets/ellipse 2.png"
                                 alt="RM"
                             />
                         </div>
@@ -74,7 +80,10 @@ export default function Hero() {
                 </div>
 
                 {/* Person 3 (Bottom Left) */}
-                <div className="hero-person person-3">
+                <div
+                    className="hero-person person-3"
+                    style={{ top: "60%", left: "6%", alignItems: "flex-start" }}
+                >
                     <div className="speech-bubble bubble-purple">
                         <p>
                             “I&apos;m the CEO, product lead, AND now doing HR? There&apos;s
@@ -84,7 +93,7 @@ export default function Hero() {
                     <div className="person-info">
                         <div className="avatar-circle">
                             <img
-                                src="https://ui-avatars.com/api/?name=Priya+S&background=random"
+                                src="/assets/ellipse 3.png"
                                 alt="PS"
                             />
                         </div>
@@ -96,7 +105,10 @@ export default function Hero() {
                 </div>
 
                 {/* Person 4 (Bottom Right) */}
-                <div className="hero-person person-4">
+                <div
+                    className="hero-person person-4"
+                    style={{ top: "55%", right: "2%", alignItems: "flex-end" }}
+                >
                     <div className="speech-bubble bubble-blue">
                         <p>
                             “Our best candidate accepted another offer while we were still
@@ -106,7 +118,7 @@ export default function Hero() {
                     <div className="person-info right-align">
                         <div className="avatar-circle">
                             <img
-                                src="https://ui-avatars.com/api/?name=Amit+T&background=random"
+                                src="/assets/ellipse 4.png"
                                 alt="AT"
                             />
                         </div>
