@@ -3,8 +3,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
+    const [mobileActiveBubble, setMobileActiveBubble] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setMobileActiveBubble((prev) => (prev + 1) % 4);
+        }, 3000); // Change bubble every 3 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section className="hero">
             {/* Background Arcs */}
@@ -34,7 +45,7 @@ export default function Hero() {
             <div className="container hero-container">
                 {/* Person 1 (Top Left) */}
                 <motion.div
-                    className="hero-person person-1"
+                    className={`hero-person person-1 ${mobileActiveBubble === 0 ? "mobile-active" : "mobile-hidden"}`}
                     style={{ top: "-10%", left: "2%", alignItems: "flex-start" }}
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1, y: -12 }}
@@ -66,7 +77,7 @@ export default function Hero() {
 
                 {/* Person 2 (Top Right) */}
                 <motion.div
-                    className="hero-person person-2"
+                    className={`hero-person person-2 ${mobileActiveBubble === 1 ? "mobile-active" : "mobile-hidden"}`}
                     style={{ top: "-5%", right: "5%", alignItems: "flex-end" }}
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1, y: -12 }}
@@ -98,7 +109,7 @@ export default function Hero() {
 
                 {/* Person 3 (Bottom Left) */}
                 <motion.div
-                    className="hero-person person-3"
+                    className={`hero-person person-3 ${mobileActiveBubble === 2 ? "mobile-active" : "mobile-hidden"}`}
                     style={{ top: "60%", left: "6%", alignItems: "flex-start" }}
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1, y: -12 }}
@@ -130,7 +141,7 @@ export default function Hero() {
 
                 {/* Person 4 (Bottom Right) */}
                 <motion.div
-                    className="hero-person person-4"
+                    className={`hero-person person-4 ${mobileActiveBubble === 3 ? "mobile-active" : "mobile-hidden"}`}
                     style={{ top: "55%", right: "2%", alignItems: "flex-end" }}
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1, y: -12 }}
