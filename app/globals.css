@@ -385,33 +385,31 @@ img {
   /* Slightly smaller */
 }
 
-/* Specific Positions - Wide & Clear Layout */
-/* Top Row */
+/* Specific Positions - Asymmetric & Organic Layout */
+/* Top Row - Scattered */
 .person-1 {
-  top: 5%;
-  left: 0;
+  top: 8%;
+  left: 2%;
   align-items: flex-start;
 }
 
 .person-2 {
-  top: 8%;
-  right: 0;
+  top: 12%;
+  right: 5%;
   align-items: flex-end;
-  /* right-aligned stack */
 }
 
-/* Bottom Row - Pushed down to clear text */
+/* Bottom Row - Staggered heights to increase gap */
 .person-3 {
-  top: 55%;
-  left: 0;
+  top: 60%;
+  left: 6%;
   align-items: flex-start;
 }
 
 .person-4 {
-  top: 52%;
-  right: 0;
+  top: 55%;
+  right: 2%;
   align-items: flex-end;
-  /* right-aligned stack */
 }
 
 .speech-bubble {
